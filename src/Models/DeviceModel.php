@@ -20,14 +20,7 @@ class DeviceModel extends Model
      */
     protected $fillable = [
         'title',
-        'warranty',
         'type_id',
-        'year',
-        'length',
-        'tank_size',
-        'seats',
-        'fuel_type_id',
-        'alternate_fuel_type_id',
     ];
 
     public function getTable()
