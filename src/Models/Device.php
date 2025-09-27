@@ -48,7 +48,7 @@ class Device extends Model
             DeviceLocation::class,
             config('pkg-devices.table_prefix') . "device_location_history",
             'device_id',
-            'device_location_id',
+            'location_id',
         )
             ->using(DeviceLocationHistory::class)
             ->withPivot(['date_from', 'date_to']);

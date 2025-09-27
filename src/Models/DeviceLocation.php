@@ -30,7 +30,7 @@ class DeviceLocation extends Model
         return $this->belongsToMany(
             Device::class,
             config('pkg-devices.table_prefix') . "device_location_history",
-            'device_location_id',
+            'location_id',
             'device_id',
             'id',
             'id'
