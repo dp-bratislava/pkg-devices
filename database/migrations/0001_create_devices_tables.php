@@ -110,7 +110,7 @@ return new class extends Migration
         $tablePrefix = config('pkg-devices.table_prefix');
 
         Schema::dropIfExists($tablePrefix . 'device_location_history');
-        Schema::dropIfExists($tablePrefix . 'device_group_device');
+        Schema::dropIfExists($tablePrefix . 'device_group');
         Schema::dropIfExists($tablePrefix . 'devices');
         Schema::dropIfExists($tablePrefix . 'device_locations');
         Schema::dropIfExists($tablePrefix . 'device_models');
