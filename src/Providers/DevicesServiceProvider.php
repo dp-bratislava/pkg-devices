@@ -15,17 +15,12 @@ class DevicesServiceProvider extends PackageServiceProvider
             ->name('pkg-devices')
             ->hasConfigFile()
             ->hasMigrations([
-                '0001_create_devices_tables',
+                '2025_01_01_080001_create_devices_tables',
             ])
+            ->runsMigrations()
             ->hasInstallCommand(function (InstallCommand $command) {
                 $command
-                    ->startWith(function(InstallCommand $command) {
-                        $command->info('Installing pkg-eav first...');
-                        $command->call('pkg-eav:install');
-                    })
-                    ->publishMigrations()
-                    ->publishConfigFile()
-                    ->askToRunMigrations();
+                    ->publishConfigFile();
             });
     }    
 }
